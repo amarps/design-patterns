@@ -1,0 +1,32 @@
+@startuml
+abstract Character {
+	WeaponBehaviour mWeapon
+	fight()
+}
+
+class Queen
+class King
+class Troll
+class Knight
+
+interface WeaponBehaviour {
+	useWeapon()
+}
+
+class KnifeBehaviour
+class BowAndArrowBehaviour
+class AxeBehaviour
+class SwordBehaviour
+
+Character --|> WeaponBehaviour
+
+Character <-- Queen
+Character <-- King
+Character <-- Troll
+Character <-- Knight
+
+WeaponBehaviour <.. KnifeBehaviour
+WeaponBehaviour <.. BowAndArrowBehaviour
+WeaponBehaviour <.. AxeBehaviour
+WeaponBehaviour <.. SwordBehaviour
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+skinparam groupInheritance 2
+
+class Context {
+	ContextInterface()
+}
+
+interface Strategy {
+	AlgorithmInterface()
+}
+
+class ConcreteStrategyA {
+	AlgorithmInterface()
+}
+
+class ConcreteStrategyB {
+	AlgorithmInterface()
+}
+
+class ConcreteStrategyC {
+	AlgorithmInterface()
+}
+
+Strategy <|-- ConcreteStrategyA
+Strategy <|-- ConcreteStrategyB
+Strategy <|-- ConcreteStrategyC
+Context o--> Strategy
+
+@enduml

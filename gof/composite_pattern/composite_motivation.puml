@@ -1,0 +1,46 @@
+@startuml
+skinparam groupInheritance 2
+allowmixing
+
+package compositePattern {
+
+note as N1
+"group components to form larger components which in turn can be grouped 
+to form still a components. Recursive composition"
+end note
+
+Abstract Graphic {
++ Draw()
++ Add(Graphic)
++ Remove(Graphic)
++ GetChild(int)
+}
+
+class Text {
++ Draw()
+}
+
+class Rectangle {
++ Draw()
+}
+
+class Line {
++ Draw()
+}
+
+class Picture {
+- Graphic graphics_list
++ Draw() "for all graphic in graphics_list g.Draw()"
++ Add(Graphic g) "add g to list of graphic"
++ Remove(Graphic)
++ GetChild(int)
+}
+
+Picture::graphics_list o--> Graphic
+
+Graphic <|-- Picture
+Graphic <|-- Text
+Graphic <|-- Rectangle
+Graphic <|-- Line
+}
+@enduml

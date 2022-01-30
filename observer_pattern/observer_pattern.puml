@@ -1,0 +1,23 @@
+interface Subject {
+	registerObserver()
+	removeObserver()
+	notifyObserver()
+}
+
+interface Observer {
+	update()
+}
+
+class ConcreteSubject {
+	getState()
+	setState()
+}
+
+class ConcreteObserver {
+	update()
+}
+
+Subject "many observers" --o Observer
+ConcreteObserver ..> Observer
+ConcreteSubject ..> Subject
+ConcreteObserver --|> ConcreteSubject

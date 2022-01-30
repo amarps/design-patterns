@@ -1,0 +1,33 @@
+@startuml
+note as N1
+Allow an object to alter its behavior when its internal state changes.The object
+will appear to change its class.
+end note
+
+class Context {
+-       State mState
++	Request() { mState->Handle() }
+}
+
+interface State {
++ Handle()
+}
+
+class ConcreteStateA {
++	Handle()
+}
+
+class ConcreteStateB {
++	Handle()
+}
+
+class ConcreteStateC {
++	Handle()
+}
+
+ConcreteStateA --|> State
+ConcreteStateB --|> State
+ConcreteStateC --|> State
+Context::mState o--> State
+
+@enduml

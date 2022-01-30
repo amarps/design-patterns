@@ -1,0 +1,43 @@
+@startuml
+note as N1
+Allow an object to alter its behavior when its internal state changes.The object
+will appear to change its class.
+end note
+
+class TCPConnection {
+-       TCPState mState
++	Open() {mState->Open()}
++	Close()
++	Acknowledge()
+}
+
+interface TCPState {
++ Open()
++ Close()
++ Acknowledge()
+}
+
+class TCPClosed {
++	Open()
++	Close()
++	Acknowledge()
+}
+
+class TCPListen {
++	Open()
++	Close()
++	Acknowledge()
+}
+
+class TCPEstablished {
++	Open()
++	Close()
++	Acknowledge()
+}
+
+TCPClosed --|> TCPState
+TCPEstablished --|> TCPState
+TCPListen --|> TCPState
+TCPConnection::mState o--> TCPState
+
+@enduml

@@ -1,0 +1,69 @@
+@startuml
+rectangle "decorator beverage" {
+
+class Beverage {
+	description
+	getDescription()
+	cost()
+}
+
+class HouseBlend
+class DarkRoast
+class Decaf
+class Espresso
+
+interface CondimentDecorator
+class Milk
+class Mocha
+class Soy
+class Whip
+	
+package Mysql <<Database>> {
+		
+}
+
+package MongoDB <<Database>> {
+		
+}
+
+package PostgreSQL <<Database>> {
+		
+}
+
+package MongoDB <<Database>> {
+		
+}
+
+package Firebase <<Database>> {
+		
+}
+
+package API <<Cloud>> {
+		
+}
+
+Beverage::getDescription "Get data" ..> API
+API ..> Firebase
+Firebase ..> API
+API ..> Beverage::getDescription
+
+CondimentDecorator <-- Milk
+CondimentDecorator <-- Mocha
+CondimentDecorator <-- Soy
+CondimentDecorator <-- Whip
+
+Beverage <|-- CondimentDecorator
+
+Beverage <-- HouseBlend
+Beverage <-- DarkRoast
+Beverage <-- Espresso
+Beverage <-- Decaf
+
+note as N1
+Decorator pattern implementation
+on beverage case
+end note
+
+note top of Beverage : "Act as Abstract component"
+}
+@enduml

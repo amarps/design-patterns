@@ -1,0 +1,35 @@
+@startuml
+skinparam groupInheritance 2
+
+class Composition {
+	+ Traverse()
+	+ Repair()
+	- Compositor compositor
+}
+
+interface Compositor {
+	+ Repair()
+}
+
+note right of Composition::Repair
+"compositor->compose"
+end note
+
+class SimpleCompositor {
+	+ Compose()
+}
+
+class TeXCompositor {
+	+ Compose()
+}
+
+class ArrayCompositor {
+	+ Compose()
+}
+
+Compositor <|-- SimpleCompositor
+Compositor <|-- TeXCompositor
+Compositor <|-- ArrayCompositor
+Composition::compositor o--> Compositor
+
+@enduml

@@ -1,0 +1,25 @@
+rectangle "decorator pattern" {
+class Component {
+	MethodA ()
+	MethodB ()
+}
+class ConcreteComponent
+class Decorator
+class ConcreteDecoratorA {
+	methodA()
+	methodB()
+	newBehaviour()
+}
+
+class ConcreteDecoratorB {
+	Component wrappedObj
+	Object newState
+	MethodA()
+	MethodB()
+}
+
+Decorator --|> Component : "Each Component can be used on its own,\nor wrapped by a decorator"
+Decorator <.. ConcreteDecoratorA 
+Decorator <.. ConcreteDecoratorB
+Component <.. ConcreteComponent
+}

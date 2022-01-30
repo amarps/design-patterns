@@ -1,0 +1,41 @@
+@startuml
+interface Subject {
+	registerObserver(Observer o)
+	removeObserver(Observer o)
+	notifyObserver()
+}
+
+interface Observer {
+	update()
+}
+
+interface DisplayElement {
+	display()
+}
+
+class WeatherData {
+	- std::vector<Observer> observers;
+	getTemperature()
+	getHumidity()
+	getPressure()
+	meassurementChanged()
+}
+
+CurrentConditionDisplay --|> Subject
+Subject --o Observer
+
+CurrentConditionDisplay ..> DisplayElement
+CurrentConditionDisplay ..> Observer
+
+StatisticsDisplay ..> DisplayElement
+StatisticsDisplay ..> Observer
+
+ForecastDisplay ..> DisplayElement
+ForecastDisplay ..> Observer
+
+ThirdPartyDisplay ..> DisplayElement
+ThirdPartyDisplay ..> Observer
+
+
+WeatherData ..> Subject
+@enduml

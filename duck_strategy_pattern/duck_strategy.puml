@@ -1,0 +1,38 @@
+@startuml
+
+class Duck {
+  + swim()
+  + display()
+  + performQuack() { mQuack_behaviour.quack() }
+  + performFly()   { mFly_behaviour.fly() }
+  + setFlyBehaviour()
+  + setQuackBehaviour()
+
+  # FlyBehavior mFly_behaviour
+  # QuackBehaviour mQuack_behaviour
+}
+
+interface FlyBehavior {
+  + fly()
+}
+
+FlyWithWings ..> FlyBehavior
+FlyWithRockets ..> FlyBehavior
+FlyNoNo ..> FlyBehavior
+
+interface QuackBehaviour {
+  + void quack()
+}
+
+Quack ..> QuackBehaviour
+Squeak ..> QuackBehaviour
+MuteQuack ..> QuackBehaviour
+
+Duck --|> FlyBehavior
+Duck --|> QuackBehaviour
+
+MallardDuck --> Duck
+RuberDuck --> Duck
+DecoyDuck --> Duck
+
+@enduml

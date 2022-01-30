@@ -1,0 +1,46 @@
+@startuml
+
+class ClassName {
+	Operation1()
+	Type Operation2()
+	instanceVariable1
+	Type instanceVariable2
+}
+
+class Instatiator
+Object Instatiatee
+Instatiator "Indicate instantiatee" ..> Instatiatee
+class ParentClass
+class Subclass
+ParentClass "indicate inheritance relationship" <|-- Subclass
+
+abstract AbstractClass {
+	Operation()
+}
+
+class ConcreteSubclass {
+	Operation()
+}
+
+AbstractClass <|-- ConcreteSubclass
+
+class ExistingClass {
+	ExistingOperation()
+}
+class Mixin {
+	MixinOperation()
+}
+class AugmentedClass {
+	ExistingOperation()
+	MixinOperation()
+}
+
+AugmentedClass --|> ExistingClass
+AugmentedClass --|> Mixin
+
+note right of ConcreteSubclass::Operation
+"Implementation Pseudocode"
+end note
+
+
+@enduml

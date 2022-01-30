@@ -1,0 +1,38 @@
+@startuml
+
+note as N1
+convert inteface of drawingeditor::shape
+to clientApp::textShape interface.
+end note
+
+package drawingEditor {
+
+interface Shape {
++ BoundingBox()
++ CreateManipulator()
+}
+
+class Line {
++ BoundingBox()
++ CreateManipulator()	
+}
+
+}
+
+package ClientApp {
+class TextShape {
++ BoundingBox() { return text->GetExtent() }
++ CreateManipulator() { return new TextManipulator }
+}
+
+class TextView {
++ GetExtent()
+}
+}
+
+Shape <|-- Line
+
+TextShape --|> Shape
+TextShape --> TextView
+
+@enduml

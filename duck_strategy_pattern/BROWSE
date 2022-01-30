@@ -1,0 +1,100 @@
+[ebrowse-hs "ebrowse 5.0" " -x" () ()][ebrowse-ts [ebrowse-cs "fly_behaviour" () 0"fly_behaviour.hh" "class fly_behaviour {" 42"fly_behaviour.hh" ]
+([ebrowse-ts [ebrowse-cs "fly_nono" () 0"fly_behaviour.hh" "class fly_nono :" 283"fly_behaviour.hh" ]
+()()
+([ebrowse-ms "fly" () 1 () "  void fly()" 327 0  () "  void fly()" 327]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "fly_with_rocket" () 0"fly_behaviour.hh" "class fly_with_rocket :" 134"fly_behaviour.hh" ]
+()()
+([ebrowse-ms "fly" () 1 () "  void fly()" 178 0  () "  void fly()" 178]
+)
+()
+()
+()
+()
+()()
+])()
+([ebrowse-ms "fly" () 9 () "  virtual void fly()" 101 0  () () 0]
+[ebrowse-ms "~fly_behaviour" () 1 () "  virtual ~fly_behaviour()" 77 0  () "  virtual ~fly_behaviour()" 77]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "duck" () 0"duck.hh" "class duck {" 91"duck.hh" ]
+([ebrowse-ts [ebrowse-cs "common_duck" () 0"duck.hh" "class common_duck :" 499"duck.hh" ]
+()()
+([ebrowse-ms "common_duck" () 0 () "  common_duck() {" 627 0  () "  common_duck() {" 627]
+[ebrowse-ms "display" () 5 () "  void display()" 538 0  () "  void display()" 538]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "muted_rocket_duck" () 0"duck.hh" "class muted_rocket_duck :" 743"duck.hh" ]
+()()
+([ebrowse-ms "display" () 5 () "  void display()" 781 0  () "  void display()" 781]
+[ebrowse-ms "muted_rocket_duck" () 0 () "  muted_rocket_duck() {" 875 0  () "  muted_rocket_duck() {" 875]
+)
+()
+()
+()
+()
+()()
+])([ebrowse-ms "name" () 0 () "  int name;" 373 0  () () 0]
+[ebrowse-ms "nullptr" () 0 () "  quack_behaviour *mQuack_behaviour = nullptr;" 475 1  () () 0]
+)
+([ebrowse-ms "display" () 5 () "  virtual void display()" 124 0  () "  virtual void display()" 124]
+[ebrowse-ms "performFly" () 4 () "  void performFly()" 295 0  () "  void performFly()" 295]
+[ebrowse-ms "performQuack" () 4 () "  void performQuack()" 204 0  () "  void performQuack()" 204]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "quack_behaviour" () 0"quack_behaviour.hh" "class quack_behaviour {" 44"quack_behaviour.hh" ]
+([ebrowse-ts [ebrowse-cs "quack_nono" () 0"quack_behaviour.hh" "class quack_nono :" 281"quack_behaviour.hh" ]
+()()
+([ebrowse-ms "quack" () 1 () "  void quack()" 329 0  () "  void quack()" 329]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "quack_wekwek" () 0"quack_behaviour.hh" "class quack_wekwek :" 138"quack_behaviour.hh" ]
+()()
+([ebrowse-ms "quack" () 1 () "  void quack()" 186 0  () "  void quack()" 186]
+)
+()
+()
+()
+()
+()()
+])()
+([ebrowse-ms "quack" () 9 () "  virtual void quack()" 108 0  () () 0]
+[ebrowse-ms "~quack_behaviour" () 1 () "  virtual ~quack_behaviour()" 81 0  () "  virtual ~quack_behaviour()" 81]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "*Globals*" () 0() () 0"main.cc" ]
+()()
+([ebrowse-ms "main" () 0 "main.cc" "int main()" 143 0  () "int main()" 143]
+[ebrowse-ms "runDuck" () 0 "main.cc" "void runDuck(const" 38 0  () "void runDuck(const" 38]
+)
+()
+()
+()
+()
+()()
+]
